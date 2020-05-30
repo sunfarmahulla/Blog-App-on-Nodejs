@@ -1,0 +1,31 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            
+        <%- include ("../partials/message") %>
+        <div class="contact-form">
+            <h4>Login</h4>
+            <form action="/users/login" method="POST" autocomplete="off">
+                <div>
+                    <span><label>Email</label></span>
+                    <span><input  style="width: 100%; text-transform: none;"  id="email" name="email"  placeholder="Enter Email"/></span>
+                </div>
+                <div>
+                    <span><label>Password</label></span>
+                    <span><input  style="width: 100%;"  type="password"id="password" name="password"  placeholder="Enter Password"/></span>
+                </div>
+                <div>
+                    <span><input type="submit" value="Login"></span>
+                </div>
+            </form>
+        
+        </div>
+            
+            <p >
+            No Account? <a href="/users/register">Register</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+	
