@@ -5,6 +5,7 @@ const passport = require('passport');
 const passportLocal= require('passport-local');
 const flash = require('connect-flash');
 const session = require('express-session');
+const fileUpload =  require('express-fileupload');
 
 const app = express();
 
@@ -14,6 +15,7 @@ require('./models/db');
 //include app styleing part
 app.use(express.static(__dirname + '/public'));
 
+app.use(fileUpload());
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 

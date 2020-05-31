@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Add New Post</h3></div>
+                <div class="card-body">
+                    <form action="/admin/create-post" method="post" enctype="multipart/form-data" autocomplete="off">
+                        
+                        <div class="form-group">
+                            <label class="small mb-1" for="inputFirstName">Title Name</label>
+                            <input class="form-control py-4" name="titleName" id="inputFirstName" type="text" placeholder="Enter title name of your post" />
+                        </div>
+                           
+                       
+                        <div class="form-group">
+                            <label class="small mb-1" for="inputEmailAddress">Date of Post</label>
+                            <input class="form-control py-4" id="inputEmailAddress" type="date" name="date"/>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label class="small mb-1">Title Image<font color="red">*</font></label>
+                                    
+                                </div>
+                                <div class="form-row">
+                                    <label class="small mb-1">Image(Banner not more than 2mb) and image should be .jpg or.png type extension <font color="red">*</font></label>
+                                    <div class="btn btn-warning">
+                                        <input type="file"  value="" name="titleImage" placeholder=""   >
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label class="small mb-1">Home Title image<font color="red">*</font></label>
+                                    
+                            </div>
+                                <div class="form-row">
+                                    <label class="small mb-1">Image(Banner not more than 2mb) and image should be .jpg or.png type extension <font color="red">*</font></label>
+                                    <div class="btn btn-success">
+                                        <input type="file"  value="" name="headImage" placeholder=""   >
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="form-group">
+
+                            <label class="control-label">Explain In Brief:</label>
+                            <textarea type="text" name="details" class="form-control" value=""   rows="7"></textarea> 
+                        </div>
+                        <div class="box-footer">
+                            <button class="btn btn-success btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" name="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+  <script>
+            
+            CKEDITOR.replace( 'details' );
+
+</script>
